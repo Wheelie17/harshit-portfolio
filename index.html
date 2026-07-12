@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshit Tiwari — Product Manager</title>
+<meta name="description" content="Harshit Tiwari, Product Manager. 8+ years shipping SaaS platforms for digital publishing and edtech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1F19;
+    --ink-soft:#5B5F51;
+    --paper:#EFEBE0;
+    --paper-raised:#F6F3E9;
+    --rule:#D6D0BE;
+    --accent:#1E5C46;
+    --accent-soft:#DCE7DF;
+    --gold:#A67C2E;
+    --terminal-bg:#12241E;
+    --terminal-text:#CFEFDD;
+    --terminal-accent:#6EE7B0;
+    --serif:'Newsreader', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+    --mono:'IBM Plex Mono', 'Courier New', monospace;
+    --maxw:920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--accent); color:var(--paper-raised);}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(239,235,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:14px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.02em;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  .mark .box{
+    width:30px; height:30px;
+    border:1.5px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:600;
+    font-size:12px;
+    flex-shrink:0;
+  }
+  .navlinks{
+    display:flex; align-items:center; gap:22px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .navlinks a{ text-decoration:none; color:var(--ink-soft); transition:color .15s; }
+  .navlinks a:hover{ color:var(--ink); }
+  .btn{
+    font-family:var(--mono);
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    background:var(--accent);
+    color:var(--paper-raised) !important;
+    padding:9px 16px;
+    text-decoration:none;
+    display:inline-block;
+    border:1px solid var(--accent);
+    transition:background .15s, color .15s;
+    white-space:nowrap;
+  }
+  .btn:hover{ background:var(--ink); border-color:var(--ink); }
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink) !important;
+    border:1px solid var(--ink);
+  }
+  .btn-ghost:hover{ background:var(--ink); color:var(--paper-raised) !important; }
+  .nav-cta{ display:none; }
+  @media(min-width:640px){ .nav-cta{ display:inline-block; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--rule);
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px; height:8px;
+    background:var(--accent);
+    border-radius:50%;
+    display:inline-block;
+    flex-shrink:0;
+  }
+  h1.name{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(42px, 8vw, 76px);
+    line-height:1.02;
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+  }
+  .subhead{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(18px, 2.6vw, 23px);
+    color:var(--ink-soft);
+    margin:0 0 26px;
+    max-width:640px;
+  }
+  .summary{
+    max-width:600px;
+    font-size:16px;
+    color:var(--ink-soft);
+    margin:0 0 40px;
+  }
+
+  .ledger{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    border-top:1px solid var(--rule);
+  }
+  @media(min-width:640px){ .ledger{ grid-template-columns:repeat(4,1fr); } }
+  .ledger-item{
+    padding:20px 20px 20px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .ledger-item:nth-child(odd){ border-right:1px solid var(--rule); padding-right:20px; }
+  @media(min-width:640px){
+    .ledger-item{ border-right:1px solid var(--rule) !important; }
+    .ledger-item:last-child{ border-right:none !important; }
+  }
+  .ledger-num{
+    font-family:var(--mono);
+    font-size:clamp(22px,3.4vw,30px);
+    font-weight:600;
+    color:var(--ink);
+    display:block;
+  }
+  .ledger-label{
+    font-family:var(--mono);
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+    margin-top:4px;
+    display:block;
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  section{ padding:64px 0; border-bottom:1px solid var(--rule); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:40px;
+  }
+  .section-head h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(28px,4vw,38px);
+    margin:0;
+  }
+  .section-tag{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    white-space:nowrap;
+  }
+
+  /* ---------- CHANGELOG (EXPERIENCE) ---------- */
+  .entry{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:32px 0;
+    border-top:1px solid var(--rule);
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .entry.in-view{ opacity:1; transform:translateY(0); }
+  @media(min-width:760px){
+    .entry{ grid-template-columns:200px 1fr; gap:32px; }
+  }
+  .entry:first-of-type{ border-top:none; padding-top:0; }
+  .entry-meta{ }
+  .version{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:22px;
+    color:var(--accent);
+    display:block;
+    margin-bottom:6px;
+  }
+  .entry-dates, .entry-loc{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+    display:block;
+  }
+  .entry-role{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:22px;
+    margin:0 0 2px;
+  }
+  .entry-company{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  .entry ul{
+    margin:0 0 16px;
+    padding-left:18px;
+  }
+  .entry li{
+    margin-bottom:9px;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .entry li::marker{ color:var(--accent); }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    font-family:var(--mono);
+    font-size:12px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:5px 10px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+
+  /* ---------- TERMINAL CALLOUT ---------- */
+  .terminal{
+    background:var(--terminal-bg);
+    color:var(--terminal-text);
+    padding:28px;
+    margin-top:10px;
+    font-family:var(--mono);
+    font-size:13.5px;
+    line-height:1.7;
+    border-radius:3px;
+  }
+  .terminal .line{ display:block; }
+  .terminal .prompt{ color:var(--terminal-accent); }
+  .terminal .comment{ color:#7FA090; }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  @media(min-width:700px){ .skills-grid{ grid-template-columns:1fr 1fr; } }
+  .skill-group h3{
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    margin:0 0 12px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--rule);
+  }
+  .skill-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+  .skill-tag{
+    font-size:14px;
+    padding:6px 12px;
+    border:1px solid var(--rule);
+    background:var(--paper-raised);
+  }
+
+  /* ---------- CREDENTIALS ---------- */
+  .cred-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+  @media(min-width:700px){ .cred-grid{ grid-template-columns:1fr 1fr; } }
+  .cred-block h3{
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    margin:0 0 16px;
+  }
+  .cred-item{ margin-bottom:16px; }
+  .cred-title{ font-family:var(--serif); font-size:17px; font-weight:600; margin:0 0 2px; }
+  .cred-sub{ font-size:13.5px; color:var(--ink-soft); margin:0; }
+  .cred-sub .gold{ color:var(--gold); font-family:var(--mono); font-size:12px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:56px 0 32px;
+  }
+  footer h2{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(30px,5vw,44px);
+    margin:0 0 18px;
+    max-width:520px;
+  }
+  footer p.lead{
+    color:#B9BCAE;
+    max-width:460px;
+    margin:0 0 32px;
+    font-size:15.5px;
+  }
+  .contact-row{
+    display:flex; flex-wrap:wrap; gap:14px;
+    margin-bottom:44px;
+  }
+  footer .btn{
+    background:var(--terminal-accent);
+    color:var(--ink) !important;
+    border-color:var(--terminal-accent);
+    font-weight:500;
+  }
+  footer .btn:hover{ background:var(--paper); border-color:var(--paper); }
+  footer .btn-ghost{
+    border-color:#4A4E42;
+    color:var(--paper) !important;
+  }
+  footer .btn-ghost:hover{ background:#2A2E24; }
+  .colophon{
+    border-top:1px solid #333729;
+    padding-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:10px;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:#8B8E7E;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .entry{ transition:none; opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="mark"><span class="box">HT</span> Harshit Tiwari</a>
+    <nav class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+      <a href="Harshit_Tiwari_CV.pdf" class="btn nav-cta" download>Download CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <section class="hero" style="border-bottom:1px solid var(--rule);">
+      <div class="eyebrow">Product Manager — Release v5.0, currently shipping</div>
+      <h1 class="name">Harshit Tiwari</h1>
+      <p class="subhead">8+ years turning messy publisher and edtech workflows into platform features that ship.</p>
+      <p class="summary">I build and scale SaaS platforms across digital publishing and edtech — translating complex workflows into scalable capabilities, shipping API integrations, and delivering features live on 200+ publisher websites. I work closely with engineering, UX, and business teams to define requirements, prioritize roadmaps, and drive data-backed improvements, including AI-assisted automation.</p>
+
+      <div class="ledger">
+        <div class="ledger-item"><span class="ledger-num">8+</span><span class="ledger-label">Years in product</span></div>
+        <div class="ledger-item"><span class="ledger-num">200+</span><span class="ledger-label">Publisher sites shipped to</span></div>
+        <div class="ledger-item"><span class="ledger-num">$200K</span><span class="ledger-label">New licensing revenue</span></div>
+        <div class="ledger-item"><span class="ledger-num">90%</span><span class="ledger-label">Publisher CSAT</span></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-head">
+        <h2>Release history</h2>
+        <span class="section-tag">Reverse-chronological changelog</span>
+      </div>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="version">v5.0</span>
+          <span class="entry-dates">01/2023 — Present</span>
+          <span class="entry-loc">Noida, India</span>
+        </div>
+        <div class="entry-body">
+          <h3 class="entry-role">Product Manager</h3>
+          <p class="entry-company">MPS Limited</p>
+          <ul>
+            <li>Own product strategy and roadmap for a Drupal-based CMS platform supporting 44 publishers and 200+ websites; publisher retention up 50% through customer feedback, competitive analysis, and data-driven prioritization.</li>
+            <li>Lead discovery workshops for new and migrating publishers, turning stakeholder and support insights into prioritized requirements — cut onboarding/migration time and lifted CSAT to 90%.</li>
+            <li>Own the full product lifecycle end to end: PRDs, acceptance criteria, UAT, release coordination, and adoption.</li>
+            <li>Migrated 40+ publishers from UA3 to GA4 and became in-house SME on Google Ad Manager, GA4, and GTM — contributing to a 43% lift in publisher monetization performance.</li>
+            <li>Designed and shipped an AI-powered content taxonomy workflow — cut manual classification effort 60% and saved publishers 12 hours/week of processing time.</li>
+          </ul>
+          <div class="terminal">
+            <span class="line comment">// identified and led an AI monetization opportunity, end to end</span>
+            <span class="line"><span class="prompt">$</span> built an MCP-powered content access platform</span>
+            <span class="line">&nbsp;&nbsp;→ secure API-key licensing, configurable per-query pricing</span>
+            <span class="line"><span class="prompt">$</span> result: +$200,000 new licensing revenue · 8 publishers onboarded · 3 months</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="version">v4.0</span>
+          <span class="entry-dates">05/2022 — 12/2022</span>
+          <span class="entry-loc">Bengaluru, India</span>
+        </div>
+        <div class="entry-body">
+          <h3 class="entry-role">Product Manager-2</h3>
+          <p class="entry-company">Simplilearn Solutions Private Limited</p>
+          <ul>
+            <li>Led product-led process improvements across course categories, contributing to a 10% revenue increase within 6 months.</li>
+            <li>Partnered with marketing, pricing, legal, and operations on go-to-market strategy for new course launches.</li>
+            <li>Built messaging frameworks and sales enablement assets that sharpened product positioning and conversion.</li>
+            <li>Coordinated cross-functional stakeholders to keep launches compliant, on-price, and operationally sound.</li>
+          </ul>
+          <div class="chips"><span class="chip">+10% revenue in 6 mo</span></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="version">v3.0</span>
+          <span class="entry-dates">10/2021 — 04/2022</span>
+          <span class="entry-loc">Bengaluru, India</span>
+        </div>
+        <div class="entry-body">
+          <h3 class="entry-role">Program Manager</h3>
+          <p class="entry-company">Vedantu Innovations Pvt. Ltd</p>
+          <ul>
+            <li>Designed a scheduling optimization framework that cut class overlap 13% and cancellations 19%.</li>
+            <li>Built internal JavaScript automation tools that streamlined communication workflows and reduced manual coordination.</li>
+            <li>Developed a teacher scheduling and utilization framework that improved operational efficiency for large-scale online classes.</li>
+          </ul>
+          <div class="chips"><span class="chip">-13% overlap</span><span class="chip">-19% cancellations</span></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="version">v2.0</span>
+          <span class="entry-dates">08/2019 — 10/2021</span>
+          <span class="entry-loc">Bengaluru, India</span>
+        </div>
+        <div class="entry-body">
+          <h3 class="entry-role">Program Manager</h3>
+          <p class="entry-company">Zolostays Property Solutions Pvt. Ltd</p>
+          <ul>
+            <li>Led MyFirstXP, a platform and Android app connecting students and professionals to job opportunities — reached 50K+ users and enabled 800 successful placements.</li>
+            <li>Defined product requirements and partnered with engineering to ship platform features and partner integrations.</li>
+            <li>Built and managed a nationwide vendor ecosystem of 70+ partners, including onboarding, verification, and quality management.</li>
+            <li>Designed operational frameworks that scaled across 8 cities and 450+ properties, lifting NPS from -30 to +30 in 3 months.</li>
+          </ul>
+          <div class="chips"><span class="chip">50K+ users</span><span class="chip">800 placements</span><span class="chip">NPS -30 → +30</span></div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="version">v1.0</span>
+          <span class="entry-dates">09/2014 — 03/2017</span>
+          <span class="entry-loc">Bengaluru, India</span>
+        </div>
+        <div class="entry-body">
+          <h3 class="entry-role">Associate Software Engineer</h3>
+          <p class="entry-company">Accenture Solutions Pvt. Ltd — Project CalHEERS</p>
+          <ul>
+            <li>Supported the CalHEERS healthcare enrollment platform, serving 2 million users, resolving 700+ tickets/month within SLA via SQL and ServiceNow.</li>
+            <li>Developed front-end components in HTML, CSS, and XML to improve interface functionality.</li>
+            <li>Coordinated with cross-functional engineering teams to resolve 20+ escalations/month, cutting average resolution time by 30%.</li>
+          </ul>
+          <div class="chips"><span class="chip">2M-user platform</span><span class="chip">-30% resolution time</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Capabilities</h2>
+        <span class="section-tag">Manifest</span>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Product</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Product Strategy</span>
+            <span class="skill-tag">Product Roadmapping</span>
+            <span class="skill-tag">Product Discovery</span>
+            <span class="skill-tag">API Integrations</span>
+            <span class="skill-tag">Agile &amp; Scrum</span>
+            <span class="skill-tag">PRD Writing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>AI Tools &amp; Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Product Management</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Gamma.ai</span>
+            <span class="skill-tag">Lovable</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>CMS &amp; Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Drupal CMS</span>
+            <span class="skill-tag">HighWire Platform</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Delivery Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">JIRA</span>
+            <span class="skill-tag">Confluence</span>
+            <span class="skill-tag">Microsoft Office</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Analytics &amp; AdTech</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Google Analytics (GA4)</span>
+            <span class="skill-tag">Google Ad Manager</span>
+            <span class="skill-tag">Google Tag Manager</span>
+            <span class="skill-tag">AdButler</span>
+            <span class="skill-tag">Google AdSense</span>
+            <span class="skill-tag">SendGrid</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">XML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="section-head">
+        <h2>Credentials</h2>
+        <span class="section-tag">Education &amp; certificates</span>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-block">
+          <h3>Education</h3>
+          <div class="cred-item">
+            <p class="cred-title">PGDM-C, Strategic Marketing &amp; Communication</p>
+            <p class="cred-sub">MICA, Ahmedabad — 06/2017 – 04/2019</p>
+          </div>
+          <div class="cred-item">
+            <p class="cred-title">B.Tech, Electronics &amp; Communication Engineering</p>
+            <p class="cred-sub">SRM University, Chennai — 08/2010 – 05/2014</p>
+          </div>
+        </div>
+        <div class="cred-block">
+          <h3>Certificates</h3>
+          <div class="cred-item">
+            <p class="cred-title">Generative AI Mastermind</p>
+            <p class="cred-sub"><span class="gold">Outskill</span> — 2026</p>
+          </div>
+          <div class="cred-item">
+            <p class="cred-title">Generative AI for Everyone</p>
+            <p class="cred-sub"><span class="gold">DeepLearning.AI, Coursera</span> — 2025</p>
+          </div>
+          <div class="cred-item">
+            <p class="cred-title">Introduction to Large Language Models</p>
+            <p class="cred-sub"><span class="gold">Google Cloud</span> — 2025</p>
+          </div>
+          <div class="cred-item">
+            <p class="cred-title">Introduction to Generative AI</p>
+            <p class="cred-sub"><span class="gold">Google Cloud</span> — 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk about your product roadmap.</h2>
+    <p class="lead">Open to Product Manager roles in SaaS, publishing, and AI-enabled platforms. Based in Noida, India — happy to work remote or relocate.</p>
+    <div class="contact-row">
+      <a class="btn" href="Harshit_Tiwari_CV.pdf" download>Download full CV</a>
+      <a class="btn btn-ghost" href="mailto:harshit.tiwari1712@gmail.com">harshit.tiwari1712@gmail.com</a>
+      <a class="btn btn-ghost" href="tel:+919740920022">+91 97409 20022</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/harshit-tiwari" target="_blank" rel="noopener">linkedin.com/in/harshit-tiwari</a>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Harshit Tiwari</span>
+      <span>Compiled July 2026 — build v5.0.2</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal changelog entries as they scroll into view
+  const entries = document.querySelectorAll('.entry');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((items)=>{
+      items.forEach(item=>{
+        if(item.isIntersecting){
+          item.target.classList.add('in-view');
+          io.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    entries.forEach(el=>io.observe(el));
+  } else {
+    entries.forEach(el=>el.classList.add('in-view'));
+  }
+</script>
+
+</body>
+</html>
